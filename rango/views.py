@@ -14,9 +14,6 @@ def show_movies(request):
 
         result = requests.get('https://api.disneyapi.dev/characters')
         json = result.json()
-
-
-    
         return render(request, 
                   "rango/movie_list.html", 
                   context={'obj': json}) 
