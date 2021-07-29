@@ -83,7 +83,7 @@ def add_page(request, category_name_slug):
    
 
 def show_movies(request):
-        result = requests.get('https://api.disneyapi.dev/characters')
+        result = requests.get('https://imdb-api.com/en/API/IMDbList/k_z846578b/ls033609554')
         json = result.json()
         return render(request, 
                   "rango/movie_list.html", 
