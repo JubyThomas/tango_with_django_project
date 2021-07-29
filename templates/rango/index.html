@@ -15,6 +15,18 @@
             <strong>{{ boldmessage }}</strong><br />
         </div>
         <div>
+            <h2>Most Liked Categories</h2>
+        {% if categories %}
+            <ul>
+            {% for category in categories %}
+                <li>{{ category.name }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+        </div>
+        <div>
             <a href="/rango/about/">About</a><br />
             <img src="{% static 'images/parrot.jpg' %}" alt="Picture of a bird"  width="300px" height="300px"/>
         </div>
