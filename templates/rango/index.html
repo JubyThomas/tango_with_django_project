@@ -6,14 +6,21 @@
 {% endblock %}
 
 {% block body_block %}
+<div>
 {% if user.is_authenticated %}
 Hello !! {{ user.username }}!
 {% else %}
-hey there , whats up!
+Hey there , whats up!
 {% endif %}
+<br/>
+<strong>{{ boldmessage }}</strong><br />
+</div>
 <br />
-            <strong>{{ boldmessage }}</strong><br />
-        </div>
+           
+        <div>
+            <div style="float: right;">
+                <img src="{% static 'images/parrot.jpg' %}" alt="Picture of Rango" width="350px" height="350px" />
+            </div>
         <div>
             <h2>Most Liked Categories</h2>
         {% if categories %}
@@ -40,7 +47,6 @@ hey there , whats up!
         {% endif %}
         </div>
 
-        <div>
-            <img src="{% static 'images/parrot.jpg' %}" alt="Picture of Rango" width="200px" height="200px" />
-        </div>
+       
+    </div>
         {% endblock %}
