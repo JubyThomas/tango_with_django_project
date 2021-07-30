@@ -1,24 +1,28 @@
-<!DOCTYPE html>
-
+  
+{% extends 'rango/base.html' %}
 {% load staticfiles %}
 
-<html>
+{% block title_block %}
+    About Rango
+{% endblock %}
 
-    <head>
-        <title>Rango</title>
-    </head>
-
-    <body>
-        <h1>Rango says...</h1>
-        <div>
-            here is the about page. <br />
-            This tutorial has been put together by David Maxwell.<br />
-        </div>
-        <div>
-            <a href="{% url 'rango:about' %}">About</a>
-            <img src="{% static 'images/parrot.jpg' %}" alt="Picture of Rango"  width="300px" height="300px"/>
-            <img src="{{ MEDIA_URL }}conure.jpg" alt="Picture of a Conure"  width="300px" height="300px"/>
-        </div>
-    </body>
-
-</html>
+{% block body_block %}
+    <h1>Rango says...</h1>
+    <div>
+     About page. <br />
+    </div>
+    <div style="align-content: flex-end;">
+      <img
+        src="{% static 'images/parrot.jpg' %}"
+        alt="Picture of Rango"
+        width="300px"
+        height="300px" 
+      />
+      <img
+        src="{{ MEDIA_URL }}conure.jpg"
+        alt="Picture of a Conure"
+        width="300px"
+        height="300px" 
+      />
+    </div>
+    {% endblock %}
